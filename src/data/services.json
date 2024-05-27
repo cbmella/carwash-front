@@ -1,0 +1,18 @@
+[
+  {
+    "name": "lavado simple",
+    "value": 10000
+  },
+  {
+    "name": "lavado de motor",
+    "value": 12000
+  },
+  {
+    "name": "lavado completo",
+    "value": 15000
+  },
+  {
+    "name": "lavado tapizado",
+    "value": 25000
+  }
+]
