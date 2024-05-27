@@ -4,8 +4,8 @@
   },
   "navbar": {
     "home": "Home",
-    "pets": "Pets",
-    "lostPet": "Lost Pet",
+    "me": "me",
+    "logout": "Logout",
     "adoption": "Adoption",
     "login": "Login",
     "register": "Register",

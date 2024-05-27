@@ -16,6 +16,8 @@ const NavbarComponent: React.FC = () => {
     navigate('/logout');
   };
 
+  const isAuthenticated = !!localStorage.getItem('token');
+
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
@@ -28,9 +30,11 @@ const NavbarComponent: React.FC = () => {
             <Nav.Link as={Link} to="/">
               {t('navbar.home')}
             </Nav.Link>
-            <Nav.Link as={Link} to="/pets">
-              {t('navbar.pets')}
-            </Nav.Link>
+            {isAuthenticated && (
+              <Nav.Link as={Link} to="/me">
+                {t('navbar.me')}
+              </Nav.Link>
+            )}
           </Nav>
           <Nav>
             <Button
@@ -47,12 +51,14 @@ const NavbarComponent: React.FC = () => {
             >
               {t('navbar.english')}
             </Button>
-            <Button
-              variant="outline-danger"
-              onClick={handleLogout}
-            >
-              {t('navbar.logout')}
-            </Button>
+            {isAuthenticated && (
+              <Button
+                variant="outline-danger"
+                onClick={handleLogout}
+              >
+                {t('navbar.logout')}
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

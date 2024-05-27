@@ -4,8 +4,8 @@
   },
   "navbar": {
     "home": "Inicio",
-    "pets": "Mascotas",
-    "lostPet": "Mascota Perdida",
+    "me": "yo",
+    "logout": "Salir",
     "adoption": "Adopción",
     "login": "Iniciar Sesión",
     "register": "Registro",
